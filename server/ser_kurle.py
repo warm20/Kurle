@@ -1,5 +1,5 @@
 import socket as sok
-from threading import Thread
+from threading import *
 
 class Server:
     def __init__(self, host, port) -> None:
