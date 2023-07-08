@@ -12,4 +12,6 @@ class Server:
         self.server.listen()
         while True:
             c,addr = self.server.accept()
+            req = c.recv(1024)
+            hdrs = req.split(b"\r\n")
             
