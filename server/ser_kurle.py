@@ -9,4 +9,7 @@ class Server:
         self.server.bind((self.host, self.port))
 
     def run(self) -> None:
-        ...
+        self.server.listen()
+        while True:
+            c,addr = self.server.accept()
+            
